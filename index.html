@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Mohammed Abdullah">
+    <meta property="og:description" content="About Mohammed Abdullah">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <title>Mohammed Abdullah </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./user.png" type="image/x-icon">
+
+   
+
+
+
+    <style>
+        .spring-bounce {
+    animation: spring-bounce 1s ease-in;
+}
+
+@keyframes spring-bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+        :root {
+            --primary-gradient: linear-gradient(45deg,  #773ca4, #33afad);
+            --secondary-gradient: linear-gradient(135deg, #667eea, #764ba2);
+            --text-color: #ffffff;
+            --background-color: #0f0c29;
+            --card-background: rgba(255, 255, 255, 0.1);
+            --gradient-start: #8A4FFF;
+            --gradient-end: #23D3E6;
+        }
+
+     
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #0A0A0A;
+        }
+        .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background: rgba(255, 255, 255, 0.1); */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar-content {
+    width: 100%; /* Ensure the navbar content stretches across the full width */
+    display: flex;
+    justify-content: space-between; /* Align logo to the left and links to the right */
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Position relative for the absolute positioning of the hamburger menu */
+}
+
+.navbar-logo {
+    font-size: 1.7rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative; /* Keep the logo at the top */
+    z-index: 2; /* Ensure the logo stays above the navbar links */
+    margin-left: 60px;
+
+
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 1030px) {
+    .navbar-logo {
+        font-size: 20px;
+        margin-left: 1px;
+    }
+}
+@media (max-width: 768px) {
+    .profile-image {
+
+            margin-top:7px !important;
+        }
+    .navbar-content {
+        flex-direction: row; /* Keep the navbar content in a row */
+        align-items: center;
+    }
+
+    .navbar-logo {
+        font-size: 20px;
+        margin-left: 1px;
+    }
+
+    .navbar-links {
+        max-height: 0; /* Collapse the menu initially */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        position: absolute; /* Position the links below the logo */
+        top: 50px; /* Position them below the navbar */
+        left: 0;
+        background: rgba(12, 8, 28, 0.978);
+        backdrop-filter: blur(10px);
+        /* padding: 10px; */
+        overflow: hidden; /* Hide overflowing content during animation */
+        z-index: 1; /* Ensure the links appear below the logo */
+        transition: max-height 0.5s ease, transform 0.5s ease;
+    }
+
+    .navbar-links a {
+        margin-right: 0;
+        padding: 10px 0;
+        width: 100%; /* Make the links take full width */
+    }
+
+    /* Add a hamburger icon for mobile view */
+    .navbar-toggle {
+        display: block;
+        position: absolute; /* Position the hamburger icon absolutely */
+        right: 20px; /* Align the hamburger icon to the right */
+        top: 50%;
+        transform: translateY(-50%); /* Vertically center the icon */
+        cursor: pointer;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: var(--text-color);
+    }
+
+    .navbar-links.open {
+        max-height: 300px; /* Adjust to fit your menu content */
+        transform: scaleY(1);
+        transition: max-height 0.5s ease, transform 0.5s ease;
+        border-radius: 10px;
+    }
+}
+
+
+/* Ensure the hamburger menu is hidden on larger screens */
+@media (min-width: 769px) {
+    .navbar-toggle {
+        display: none; /* Hide the hamburger icon on larger screens */
+    }
+}
+
+/* Tablet view adjustments */
+@media (max-width: 1024px) {
+    .navbar-logo {
+        font-size: 22px;
+    }
+}
+
+
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+        }
+
+        .section {
+            padding: 80px 0;
+            /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+            /* background: linear-gradient(to right, #180a1f, #201c45, #10303b); */
+            background: linear-gradient(to right, #10303b, #201c45, #180a1f);
+            margin-bottom:-1px;
+            margin-top:-1px;;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            /* margin-bottom: 50px; */
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+        }
+        .section-title-inside {
+            text-align: center;
+            font-size: 1.7rem;
+            /* margin-bottom: 50px; */
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+            
+        }
+        .project-grid-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+            
+        }
+        @media (max-width: 768px) {
+            .project-grid-inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+            gap: 30px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+            
+        }
+        }
+
+        .project-card {
+    background: var(--card-background);
+    /* background-color: #225b63cf; */
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    width: 100%; /* Make sure it takes up the full width of its container */
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.project-card-top {
+    background: var(--card-background);
+    /* background-color: #154f56cf; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    
+}
+
+.project-card-middle {
+    background: var(--card-background);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.project-card-bottom {
+    background: var(--card-background);
+    padding: 30px;
+    transition: transform 0.3s ease;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .project-card, .project-card-top, .project-card-middle, .project-card-bottom {
+        padding: 10px; /* Reduce padding for smaller screens */
+
+    }
+}
+
+@media (max-width: 320px) {
+    .project-card {
+        padding: 10px; /* Further reduce padding for very small screens */
+
+    }
+
+    .project-card-top, .project-card-middle, .project-card-bottom {
+        padding: 10px; /* Keep padding consistent for all sections */
+
+    }
+}
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
+            /* background: linear-gradient(to right, #180a1f, #201c45, #10303b); */
+            background: linear-gradient(to right, #10303b, #201c45, #180a1f);
+            padding: 30px 0;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            margin: 0 15px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50px;
+            border: 4px solid transparent;
+            background-image: linear-gradient(45deg, #8A4FFF, #23D3E6);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            /* margin: 0 0 20px; */
+            margin-top:60px;
+            display: block;
+            box-shadow: 0 0 20px rgba(138, 79, 255, 0.5);
+        }
+        .laptop-image {
+            max-width: 90%;
+            height: auto;
+            opacity: 1;
+            filter: drop-shadow(0 0 30px rgba(35, 211, 230, 0.3));
+            transition: all 0.3s ease;
+            width: 100%; /* Ensure the image scales with the container */
+            max-width: 500px; /* Optional: Set a max width for the image */
+        }
+        .laptop-image:hover {
+            opacity: 1;
+            /* transform: scale(1.05); */
+        }
+        .name-gradient {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .wave-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                linear-gradient(45deg, rgba(138, 79, 255, 0.1), rgba(35, 211, 230, 0.1)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%238A4FFF" fill-opacity="0.1" d="M0,160L48,176C96,192,192,224,288,218.7C384,213,480,171,576,160C672,149,768,171,864,181.3C960,192,1056,192,1152,181.3C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        @media (min-width: 769px) {
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+
+        }
+    }
+    .home {
+    /* max-width: 1200px; Tailwind's container */
+    /* margin: 0 auto; Tailwind's mx-auto */
+    padding-left: 1rem; /* Tailwind's px-4 */
+    padding-right: 1rem; /* Tailwind's px-4 */
+    padding-top: 6rem; /* Tailwind's pt-24 */
+    padding-bottom: 3rem; /* Tailwind's pb-12 */
+    position: relative; /* Tailwind's relative */
+    z-index: 10; /* Tailwind's z-10 */
+ 
+    /* height: 100vh;  */
+     /* background: linear-gradient(to right, #2e133a, #201c45, #16404e); */
+     /* background: linear-gradient(to right, #180a1f, #201c45, #10303b); */
+     background: linear-gradient(to right, #10303b, #201c45, #180a1f);
+}
+
+/* Grid layout for the two columns */
+.folio {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tailwind's md:grid-cols-2 */
+    gap: 2.5rem; /* Tailwind's gap-10 */
+    align-items: center; /* Tailwind's items-center */
+    height: 100%; /* Tailwind's h-full */
+}
+
+/* Left Column (Personal Info) */
+.personal-info {
+    max-width: 32rem; /* Tailwind's max-w-xl */
+}
+
+/* Name styling */
+.name {
+    font-size: 3rem; /* Tailwind's text-5xl */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-weight: 900; /* Tailwind's font-black */
+    margin-bottom: 1rem; /* Tailwind's mb-4 */
+    background: linear-gradient(to right, #9b49da, #40dfdc); /* Tailwind's name-gradient */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* Description styling */
+.description {
+    font-size: 1.25rem; /* Tailwind's text-xl */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #e5e7eb; /* Tailwind's text-gray-300 */
+    margin-bottom: 1.5rem; /* Tailwind's mb-6 */
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    gap: 1rem; /* Tailwind's space-x-4 */
+}
+
+/* Button styles */
+.btn-cv {
+    background: linear-gradient(to right, #6b46c1, #3b82f6); /* Tailwind's bg-gradient-to-r from-purple-600 to-blue-500 */
+    color: white;
+    padding: 0.75rem 1.5rem; /* Tailwind's px-6 py-3 */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    transition: transform 0.3s;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.btn-cv:hover {
+    transform: scale(1.05); /* Tailwind's hover:scale-105 */
+}
+
+.btn-contact {
+    border: 1px solid #4b5563; /* Tailwind's border-gray-600 */
+    color: #d1d5db; /* Tailwind's text-gray-300 */
+    padding: 0.75rem 1.5rem; /* Tailwind's px-6 py-3 */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    transition: background-color 0.3s;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+.btn-contact:hover {
+    background-color: #2d3748; /* Tailwind's hover:bg-gray-800 */
+}
+
+.laptop-container {
+    display: flex;
+    justify-content: center; /* Tailwind's justify-center */
+    align-items: center; /* Tailwind's items-center */
+    position: relative; /* Required for positioning the bubbles */
+}
+/* Bubbles animation */
+.laptop-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 204, 255, 1) 0%, rgba(0, 0, 255, 0) 70%);
+    animation: bubble-animation 4s infinite; /* Repeat the animation infinitely */
+    animation-timing-function: ease-in-out; /* Smooth timing */
+    animation-play-state: running; /* Make sure the animation is running */
+    pointer-events: none; /* Prevent it from interfering with interactions */
+}
+@media (max-width:400px) {
+    .laptop-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 204, 255, 1) 0%, rgba(0, 0, 255, 0) 70%);
+    animation: bubble-animation 4s infinite; /* Repeat the animation infinitely */
+    animation-timing-function: ease-in-out; /* Smooth timing */
+    animation-play-state: running; /* Make sure the animation is running */
+    pointer-events: none; /* Prevent it from interfering with interactions */
+}
+    
+}
+
+/* Keyframes */
+@keyframes bubble-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(1.2); /* Start with 50% scale */
+        opacity: 0.5; /* Start with 50% opacity */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(2); /* Stay at scale 2 */
+        opacity: 0.5; /* Stay at 50% opacity */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2); /* Stay at scale 2 */
+        opacity: 0.5; /* Stay at 50% opacity */
+    }
+}
+
+
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* For smaller screens (mobile/tablet) */
+    
+    .folio {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+    }
+    .home{
+        width:100vw;
+    }
+
+    .personal-info {
+        margin-bottom: 2rem; /* Add some spacing between personal info and image */
+    }
+
+    .laptop-container {
+        margin-top: 2rem; /* Add spacing between the columns */
+        justify-content: center;
+    }
+
+    .name {
+        font-size: 2.5rem; /* Slightly smaller text on smaller screens */
+    }
+
+    .description {
+        font-size: 1.125rem; /* Slightly smaller text for description */
+    }
+
+    .btn-cv, .btn-contact {
+        padding: 0.75rem 1rem; /* Smaller buttons on mobile */
+    }
+}
+/* Responsive styles */
+@media (max-width: 380px) {
+    /* For smaller screens (mobile/tablet) */
+    
+    .folio {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+    }
+    .section{
+        width:100% !important;
+    }
+
+    .personal-info {
+        margin-bottom: 2rem; /* Add some spacing between personal info and image */
+    }
+
+    .laptop-container {
+        margin-top: 2rem; /* Add spacing between the columns */
+        justify-content: center;
+    }
+
+    .name {
+        font-size: 2.5rem; /* Slightly smaller text on smaller screens */
+    }
+
+    .description {
+        font-size: 1.125rem; /* Slightly smaller text for description */
+    }
+
+    .btn-cv, .btn-contact {
+        padding: 0.75rem 1rem; /* Smaller buttons on mobile */
+    }
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem; /* Slightly larger for emphasis */
+    font-weight: 600; /* Make it bolder for visibility */
+    color: #2c3e50; /* Modern dark grey-blue color */
+    text-transform: uppercase; /* Make the text more pronounced */
+    letter-spacing: 1.5px; /* Add spacing for a sleek look */
+    margin: 1rem 0; /* Provide breathing space around */
+    padding: 0.5rem 0; /* Add padding for a cleaner effect */
+    background: linear-gradient(90deg, #4facfe, #00f2fe); /* Gradient background for a fresh look */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make the gradient visible on the text */
+    border-bottom: 2px solid #00f2fe; /* Subtle underline for emphasis */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+h3:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #3498db; /* Highlight with a soft blue */
+}
+
+
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .waves {
+    position: absolute;
+    bottom: 0; /* Align to the bottom */
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust the height of the wave */
+    background: linear-gradient(to right, rgba(0, 255, 255, 0.6), rgba(102, 51, 153, 0.8));
+    border-radius: 50% 50% 0 0; /* Rounded top corners for the wave effect */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(102, 51, 153, 0.8);
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="wave-background"></div> -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#home"><div class="navbar-logo">Mohammed Abdullah</div></a>
+            <div class="navbar-toggle" onclick="toggleMenu()">☰</div> <!-- Hamburger Icon -->
+            <div class="navbar-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#education"  class="nav-link">Education</a>
+                <a href="#skills"  class="nav-link">Skills</a>
+                <a href="#certifications"  class="nav-link">Certifications</a>
+                <a href="#projects"  class="nav-link">Projects</a>
+                <a href="#achievements"  class="nav-link">Achievements</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <div class="home" id="home">
+        <div class="folio">
+            <!-- Left Column: Personal Info -->
+            <div class="personal-info">
+                <img src="./Abdullah.jpg" alt="Mohammed Abdullah" class="profile-image">
+                <h1 class="name">
+                    Mohammed Abdullah
+                </h1>
+                <p class="description">
+                    An aspiring software developer with a passion for creating innovative solutions and a keen eye for detail.
+                </p>
+                <div class="buttons">
+                    <a href="./21071A05G4 RESUME 2024.pdf" download="Abdullah_Resume.pdf" class="btn-cv">
+                        Download CV
+                    </a>
+                    <a href="mailto:abdullah798155@gmail.com" class="btn-contact">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Right Column: Laptop Image -->
+            <div class="laptop-container">
+                <img src="./coder.webp" alt="Coding Laptop" class="laptop-image">
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- Career Objective Section -->
+    <section id="career-objective" class="section">
+        <h2 class="section-title">Career Objective</h2>
+        <div class="project-grid">
+            <div class="project-card">
+            <p>Would like to be a part of a globally reputed organization by applying my skills and knowledge towards achieving organizational goals and objectives as well as my professional goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <p><strong>B-Tech (CSE)</strong> - VNRVJIET (2021-2025) - GPA: 9.02</p>
+            </div>
+            <div class="project-card">
+                <p><strong>Intermediate</strong> - M.S Junior College (2019-2021) - Percentage: 98%</p>
+            </div>
+            <div class="project-card">
+                <p><strong>SSC</strong> - Ravindra Bharathi School (2019) - Score: 9.5</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="project-grid-inner">
+            <div class="project-card-top">
+                <h2 class="section-title-inside">Programming Languages</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>C</p>
+                    </div>
+                    <div class="project-card">
+                       
+                        <p>C++</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>Java</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>Python</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>HTML</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>CSS</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>MySQL</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>NodeJS</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>ReactJS</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>ExpressJS</p>
+                    </div>
+                    <div class="project-card">
+                        
+                        <p>MongoDB</p>
+                    </div>
+                 
+                </div>
+            </div>
+           
+        </div>
+        <div class="project-grid-inner">
+            <div class="project-card-middle">
+                <h2 class="section-title-inside">Operating systems</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>Windows</p>
+                    </div>
+                    <div class="project-card">
+                       <p>Linux</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="project-grid-inner">
+            <div class="project-card-bottom">
+                <h2 class="section-title-inside">Software tools</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>Git & Github</p>
+                    </div>
+                    <div class="project-card">
+                       
+                        <p>Autocad</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+       
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <p><strong>Data Structures and Algorithms</strong> - Udemy (March 2022 - July 2022)</p>
+            </div>
+            <div class="project-card">
+                <p><strong>MERN Stack</strong> - Udemy (August 2022 - May 2023)</p>
+            </div>
+            <div class="project-card">
+                <p><strong>Data Analytics using Python</strong> - NPTEL (Jan 2024 - Apr 2024)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Snapcook</h3><br></br>
+                <img src="./project_ss/snapcook.png" style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>A recipe recommendation system by image</p><br></br>
+                <p>Built an application to extract ingredients from an image using CNN Machine Learning algorithm and predicting recipes. Added Text to Speech and dynamic language translations for recipes.</p>
+            </div>
+            <div class="project-card">
+                <h3>Chess Analyser</h3><br></br>
+                <img src="./project_ss/chess.png" style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>Magic of Fen strings</p><br></br>
+                <p>Built an application to parse a chessboard using FEN string and display statistics of the game. Evaluates the score for both white and black and displays a graph. Detects checkmate positions.</p>
+            </div>
+            <div class="project-card">
+                <h3>Discord Chatbot</h3><br></br>
+                <img src="./project_ss/discord.png" style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>Progress faster in your game</p><br><br>
+                <p>Created a Discord bot which helps the users to get their live data from the online MMORPG which updates in real time. Developed another Discord bot to help moderate discord servers and do some basic graph statistics.</p>
+            </div>
+            <div class="project-card">
+                <h3>Attendance Tracker</h3><br></br>
+                <img src="./project_ss/attendance.png" style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>Tracking got easier</p><br></br>
+                <p>Created a live website to track attendance accurately for each day and
+                    every period by using VanillaJS and ChartJS
+                    </p>
+            </div>
+        
+        </div>
+    </section>
+    
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <h2 class="section-title">Achievements</h2>
+        <div class="project-grid-inner">
+            <div class="project-card-top">
+                <h2 class="section-title-inside">Academic</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>Won 1st Prize in Math Olympiad held by Ravindra Bharathi School.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Won 1st Prize in English communication held by English club.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Won 2nd Prize at Inter-school Math Bee competition.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Won 2nd Prize at Science Expo conducted by Ravindra Bharathi School.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-grid-inner">
+            <div class="project-card-middle">
+                <h2 class="section-title-inside">Co-Curricular</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>Participated in National Level Convergence Hackathon conducted by VNRVJIET.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Participated in ICPC International Collegiate Programming Contest.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Participated in Flipkart GRiD 4.0 - Software Development Challenge.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Participated in Holistic AI Workshop conducted by CSI at VNRVJIET.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Participated in Coding Contests conducted by Turing Hut and semi-finalist in Turing Cup 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-grid-inner">
+            <div class="project-card-bottom">
+                <h2 class="section-title-inside">Extra-Curricular</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>Won 3rd Prize at National level SIP Prodigy ABACUS championship.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Achieved Black Belt in Karate and multiple Gold, Silver, and Bronze Medals in tournaments.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Active Member of Turing Hut.</p>
+                    </div>
+                    <div class="project-card">
+                        <p>Achieved Discord Active Developer Badge from Discord Developers Team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Strengths Section -->
+    <section id="strengths" class="section">
+        <h2 class="section-title">Strengths</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <p>Focused</p>
+            </div>
+            <div class="project-card">
+                <p>Quick-Learner</p>
+            </div>
+            <div class="project-card">
+                <p>Problem Solving skills</p>
+            </div>
+            <div class="project-card">
+                <p>Communication skills</p>
+            </div>
+            <div class="project-card">
+                <p>Creative skills</p>
+            </div>
+            <div class="project-card">
+                <p>Leadership skills</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+        <h2 class="section-title">Hobbies</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <p>Travelling</p>
+            </div>
+            <div class="project-card">
+                <p>Solving Rubix Cubes</p>
+            </div>
+            <div class="project-card">
+                <p>Playing Football</p>
+            </div>
+            <div class="project-card">
+                <p>Swimming</p>
+            </div>
+            <div class="project-card">
+                <p>Star Gazing</p>
+            </div>
+            <div class="project-card">
+                <p>Playing Chess</p>
+            </div>
+            <div class="project-card">
+                <p>Gym</p>
+            </div>
+        </div>
+    </section>
+    <section id="course-list" class="section">
+        <h2 class="section-title">Courses completed</h2>
+    
+        <!-- 1 Year - 1 Semester -->
+        <div class="project-grid-inner">
+            <div class="project-card-top">
+                <h2 class="section-title-inside">1 Year - 1 Semester</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card"><p>BASICS OF ELECTRICAL ENERGY FOR ENGINEERS</p></div>
+                    <div class="project-card"><p>CALCULUS FOR ENGINEERS</p></div>
+                    <div class="project-card"><p>ENGINEERING PHYSICS</p></div>
+                    <div class="project-card"><p>PROGRAMMING THROUGH C</p></div>
+     
+                    <div class="project-card"><p>BASIC ELECTRICAL ENGINEERING LABORATORY</p></div>
+                    <div class="project-card"><p>DESIGN SENSITIZATION</p></div>
+                    <div class="project-card"><p>ENGINEERING DRAWING</p></div>
+                    <div class="project-card"><p>ENGINEERING PHYSICS LABORATORY</p></div>
+                    <div class="project-card"><p>PROGRAMMING THROUGH C LABORATORY</p></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 1 Year - 2 Semester -->
+        <div class="project-grid-inner">
+            <div class="project-card-middle">
+                <h2 class="section-title-inside">1 Year - 2 Semester</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card"><p>DATA STRUCTURES</p></div>
+                    <div class="project-card"><p>ENGINEERING CHEMISTRY</p></div>
+                    <div class="project-card"><p>ENGLISH</p></div>
+                    <div class="project-card"><p>LINEAR ALGEBRA AND ADVANCED CALCULUS</p></div>
+       
+                    <div class="project-card"><p>STATISTICAL METHODS FOR DATA ANALYSIS</p></div>
+                    <div class="project-card"><p>DATA STRUCTURES LABORATORY</p></div>
+                    <div class="project-card"><p>ENGINEERING CHEMISTRY LABORATORY</p></div>
+                    <div class="project-card"><p>ENGLISH LANGUAGE COMMUNICATION SKILLS LABORATORY</p></div>
+                    <div class="project-card"><p>WORKSHOP PRACTICES</p></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 2 Year - 3 Semester -->
+        <div class="project-grid-inner">
+            <div class="project-card-middle">
+                <h2 class="section-title-inside">2 Year - 3 Semester</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card"><p>DATABASE MANAGEMENT SYSTEMS</p></div>
+                    <div class="project-card"><p>DESIGN AND ANALYSIS OF ALGORITHMS</p></div>
+                    <div class="project-card"><p>DIGITAL LOGIC DESIGN</p></div>
+                    <div class="project-card"><p>MATHEMATICAL FOUNDATIONS FOR COMPUTER SCIENCE</p></div>
+       
+                    <div class="project-card"><p>OBJECT ORIENTED PROGRAMMING THROUGH C++</p></div>
+                    <div class="project-card"><p>DATABASE MANAGEMENT SYSTEMS LABORATORY</p></div>
+                    <div class="project-card"><p>ENVIRONMENTAL SCIENCE</p></div>
+                    <div class="project-card"><p>OBJECT ORIENTED PROGRAMMING THROUGH C++ LABORATORY</p></div>
+                    <div class="project-card"><p>PYTHON PROGRAMMING LABORATORY</p></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 2 Year - 4 Semester -->
+        <div class="project-grid-inner">
+            <div class="project-card-middle">
+                <h2 class="section-title-inside">2 Year - 4 Semester</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card"><p>COMPUTER ORGANIZATION</p></div>
+                    <div class="project-card"><p>ENGINEERING ECONOMICS AND ACCOUNTANCY</p></div>
+                    <div class="project-card"><p>FORMAL LANGUAGES AND AUTOMATA THEORY</p></div>
+                    <div class="project-card"><p>JAVA PROGRAMMING</p></div>
+   
+                    <div class="project-card"><p>PROBABILITY, STATISTICS AND QUEUING THEORY</p></div>
+                    <div class="project-card"><p>SOFTWARE ENGINEERING</p></div>
+                    <div class="project-card"><p>JAVA PROGRAMMING LABORATORY</p></div>
+                    <div class="project-card"><p>SOFTWARE ENGINEERING LABORATORY</p></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 3 Year - 5 Semester -->
+        <div class="project-grid-inner">
+            <div class="project-card-middle">
+                <h2 class="section-title-inside">3 Year - 5 Semester</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card"><p>3D PRINTING AND DESIGN</p></div>
+                    <div class="project-card"><p>AUGMENTED REALITY AND VIRTUAL REALITY</p></div>
+                    <div class="project-card"><p>COMPILER DESIGN</p></div>
+                    <div class="project-card"><p>COMPUTER NETWORKS</p></div>
+         
+                    <div class="project-card"><p>OPERATING SYSTEMS</p></div>
+                    <div class="project-card"><p>ADVANCED ENGLISH COMMUNICATION SKILLS LABORATORY</p></div>
+                    <div class="project-card"><p>COMPUTER NETWORKS AND COMPILER DESIGN LABORATORY</p></div>
+                    <div class="project-card"><p>DESIGN THINKING</p></div>
+                    <div class="project-card"><p>GENDER SENSITIZATION</p></div>
+                    <div class="project-card"><p>INTERNSHIP</p></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 3 Year - 6 Semester -->
+        <div class="project-grid-inner">
+            <div class="project-card-bottom">
+                <h2 class="section-title-inside">3 Year - 6 Semester</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card"><p>ARTIFICIAL INTELLIGENCE</p></div>
+                    <div class="project-card"><p>FUNDAMENTALS OF ROBOTICS AND DRONES</p></div>
+                    <div class="project-card"><p>LINUX PROGRAMMING</p></div>
+                    <div class="project-card"><p>MACHINE LEARNING</p></div>
+                    <div class="project-card"><p>SOFTWARE PROJECT MANAGEMENT</p></div>
+                    <div class="project-card"><p>WEB TECHNOLOGIES</p></div>
+                    <div class="project-card"><p>MACHINE LEARNING USING PYTHON LABORATORY</p></div>
+                    <div class="project-card"><p>WEB TECHNOLOGIES LABORATORY</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mohammed-abdullah-50286319b/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/abdullah798155" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">Instagram</a>
+            <a href="https://x.com/abdullah_3640" target="_blank">Twitter</a>
+        </div>
+        <p>&copy; 2024 Mohammed Abdullah</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(this.getAttribute('href'));
+
+        // Scroll into view
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+        if(targetElement.id != 'home'){
+        
+        // Add bounce animation
+        targetElement.classList.add('spring-bounce');
+
+        // Remove the animation class after it completes
+        setTimeout(() => {
+            targetElement.classList.remove('spring-bounce');
+        }, 1000);
+     } // Match this duration to the CSS animation duration
+    });
+});
+
+
+        function toggleMenu() {
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarLinks.classList.toggle('open'); // Toggle the visibility of the links 
+    }
+    const navbar = document.querySelector('.navbar');
+
+// Set the threshold for applying the shadow
+const scrollThreshold = 100;
+
+function handleScroll() {
+    // Get the amount of scroll in the body
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (scrollTop > scrollThreshold) {
+        // Add box-shadow when scrolled past the threshold
+        navbar.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.1)';
+    } else {
+        // Remove box-shadow when at the top
+        navbar.style.boxShadow = 'none';
+    }
+}
+
+
+// Add the scroll event listener to the body
+document.body.onscroll = handleScroll;
+class StaticParticleBackground {
+    constructor(container) {
+        this.container = container;
+        this.canvas = document.createElement('canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.particleCount = 200;
+
+        this.init();
+    }
+
+    init() {
+        // Canvas styling
+        this.canvas.style.position = 'fixed';
+        this.canvas.style.top = '0';
+        this.canvas.style.left = '0';
+        this.canvas.style.width = '100%';
+        this.canvas.style.height = '100%';
+        this.canvas.style.zIndex = '-1';
+        this.canvas.style.pointerEvents = 'none';
+
+        this.container.appendChild(this.canvas);
+        this.resize();
+        this.createParticles();
+        this.drawParticles();
+
+        window.addEventListener('resize', () => this.resize());
+    }
+
+    resize() {
+        this.canvas.width = window.innerWidth * 2;  // Double resolution for sharpness
+        this.canvas.height = window.innerHeight * 2;
+        this.canvas.style.width = '100%';  // Scale it back down to fit the screen
+        this.canvas.style.height = '100%';
+        this.drawParticles(); // Redraw particles on resize
+    }
+
+    createParticles() {
+        this.particles = Array.from({ length: this.particleCount }, () => ({
+            x: Math.round(Math.random() * this.canvas.width),  // Rounded positions for sharpness
+            y: Math.round(Math.random() * this.canvas.height),
+            radius: Math.random() * 2 + 1.5,  // Varying sizes
+            opacity: Math.random() * 0.4 + 0.1  // Varying intensities
+        }));
+    }
+
+    drawParticles() {
+        // Clear previous drawing
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Disable smoothing for sharp edges
+        this.ctx.imageSmoothingEnabled = false;
+
+        // Draw particles
+        this.particles.forEach(particle => {
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
+            this.ctx.fill();
+        });
+    }
+}
+
+// Initialize the particle background when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const particleContainer = document.querySelector('.home');
+    if (particleContainer) {
+        new StaticParticleBackground(particleContainer);
+    }
+});
+
+
+    </script>
+</body>
+</html>
