@@ -259,7 +259,7 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             max-width: 95%;
             margin: 0 auto;
@@ -276,6 +276,15 @@
             
         }
         @media (max-width: 768px) {
+            .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+            
+        }
             .project-grid-inner {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
@@ -471,7 +480,6 @@
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     font-weight: 900; /* Tailwind's font-black */
-    margin-bottom: 1rem; /* Tailwind's mb-4 */
     background: linear-gradient(to right, #9b49da, #40dfdc); /* Tailwind's name-gradient */
     -webkit-background-clip: text;
     color: transparent;
@@ -484,6 +492,19 @@
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     color: #e5e7eb; /* Tailwind's text-gray-300 */
+    margin-bottom: 1.5rem; /* Tailwind's mb-6 */
+}
+.tag {
+    font-size: 0.8rem; /* Tailwind's text-xl */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color:black;
+    background-color: rgba(120, 206, 120, 0.775);
+    border: 3px solid green;
+    display: inline-block;
+    border-radius: 10px;
+    padding:4px;
+    margin-top:0;
     margin-bottom: 1.5rem; /* Tailwind's mb-6 */
 }
 
@@ -502,10 +523,12 @@
     transition: transform 0.3s;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+   
 }
 
 .btn-cv:hover {
     transform: scale(1.05); /* Tailwind's hover:scale-105 */
+   
 }
 
 .btn-contact {
@@ -715,6 +738,9 @@ h3:hover {
                 <h1 class="name">
                     Mohammed Abdullah
                 </h1>
+                <p class="tag">
+                    Computer Science Major
+                </p>
                 <p class="description">
                     An aspiring software developer with a passion for creating innovative solutions and a keen eye for detail.
                 </p>
@@ -791,14 +817,6 @@ h3:hover {
                     </div>
                     <div class="project-card">
                         
-                        <p>HTML</p>
-                    </div>
-                    <div class="project-card">
-                        
-                        <p>CSS</p>
-                    </div>
-                    <div class="project-card">
-                        
                         <p>MySQL</p>
                     </div>
                     <div class="project-card">
@@ -837,7 +855,7 @@ h3:hover {
            
         </div>
         <div class="project-grid-inner">
-            <div class="project-card-bottom">
+            <div class="project-card-middle">
                 <h2 class="section-title-inside">Software tools</h2>
                 <div class="project-grid-inner">
                     <div class="project-card">
@@ -846,6 +864,33 @@ h3:hover {
                     <div class="project-card">
                        
                         <p>Autocad</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="project-grid-inner">
+            <div class="project-card-bottom">
+                <h2 class="section-title-inside">Misc/Other</h2>
+                <div class="project-grid-inner">
+                    <div class="project-card">
+                        <p>HTML</p>
+                    </div>
+                    <div class="project-card">
+                       
+                        <p>CSS</p>
+                    </div>
+                    <div class="project-card">
+                       
+                        <p>R lang</p>
+                    </div>
+                    <div class="project-card">
+                       
+                        <p>Star UML</p>
+                    </div>
+                    <div class="project-card">
+                       
+                        <p>Apache Tomcat</p>
                     </div>
                 </div>
             </div>
@@ -878,7 +923,7 @@ h3:hover {
                 <h3>Snapcook</h3><br></br>
                 <img src="./project_ss/snapcook.png" style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
                 <p>A recipe recommendation system by image</p><br></br>
-                <p>Built an application to extract ingredients from an image using CNN Machine Learning algorithm and predicting recipes. Added Text to Speech and dynamic language translations for recipes.</p>
+                <p>Built a flask application to extract ingredients from an image using CNN Machine Learning algorithm and predicting recipes. Added Text to Speech and dynamic language translations for recipes.</p>
             </div>
             <div class="project-card">
                 <h3>Chess Analyser</h3><br></br>
@@ -899,6 +944,13 @@ h3:hover {
                 <p>Created a live website to track attendance accurately for each day and
                     every period by using VanillaJS and ChartJS
                     </p>
+            </div>
+            <div class="project-card">
+                <h3>Rice Seed detection with AR</h3><br></br>
+                <img src="./project_ss/unknown.jpeg" style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>ONGOING</p><br></br>
+                <p>Developing an Augmented Reality application to detect the quality of rice seeds using Deep Learning and provide a detailed report on the quality of the seeds.</p>
+                </p>
             </div>
         
         </div>
