@@ -748,7 +748,7 @@ h3:hover {
                     <a href="./My_resume.pdf" download="Abdullah_Resume.pdf" class="btn-cv">
                         Download CV
                     </a>
-                    <a href="mailto:abdullah798155@gmail.com" class="btn-contact">
+                    <a href="#footer" class="btn-contact">
                         Contact Me
                     </a>
                 </div>
@@ -1191,17 +1191,81 @@ h3:hover {
     
     
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="social-links">
+            <a href="mailto:abdullah798155@gmail.com" >E-mail</a>
             <a href="https://www.linkedin.com/in/mohammed-abdullah-50286319b/" target="_blank">LinkedIn</a>
             <a href="https://github.com/abdullah798155" target="_blank">GitHub</a>
             <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">Instagram</a>
             <a href="https://x.com/abdullah_3640" target="_blank">Twitter</a>
         </div>
-        <p>&copy; 2024 Mohammed Abdullah</p>
+        <p>&copy; 2025 Mohammed Abdullah</p>
     </footer>
 
     <script>
+        // Create the "Scroll to Top" button
+        document.addEventListener("DOMContentLoaded", function() {
+    const scrollButton = document.createElement("button");
+    scrollButton.id = "scrollToTopBtn";
+    scrollButton.innerHTML = "&#8679;"; // Unicode arrow symbol
+    scrollButton.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        border: none;
+        border-radius: 50%;
+        background-color: #00f1fe8a;
+        color: white;
+        font-size: 24px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    `;
+
+    document.body.appendChild(scrollButton);
+
+    // Add media query styles dynamically
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerHTML = `
+        @media (max-width: 768px) {
+            #scrollToTopBtn {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 20px !important;
+            }
+        }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // Show or hide the button based on scroll position
+    window.addEventListener("scroll", function() {
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollPosition > scrollHeight * 0.1) {
+            scrollButton.style.display = "flex";
+        } else {
+            scrollButton.style.display = "none";
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    scrollButton.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+
+
+
+
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
