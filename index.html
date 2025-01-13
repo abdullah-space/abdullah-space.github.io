@@ -9,6 +9,7 @@
     <meta property="og:url" content="https://abdullah-space.github.io/">
     <meta property="og:type" content="website">
     <title>Mohammed Abdullah </title>
+    <link rel="manifest" href="/manifest.json">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +67,7 @@
     /* background: rgba(255, 255, 255, 0.1); */
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 15px;
+    padding: 10px;
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
@@ -83,12 +84,12 @@
     font-size: 1.7rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    background: var(--primary-gradient);
+    background: linear-gradient(45deg, #b093ea, #50ecfd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative; /* Keep the logo at the top */
     z-index: 2; /* Ensure the logo stays above the navbar links */
-    margin-left: 60px;
+    margin-left: 6px;
 
 
 }
@@ -117,7 +118,7 @@
 @media (max-width: 1030px) {
     .navbar-logo {
         font-size: 20px;
-        margin-left: 1px;
+        margin-left: 4px;
     }
 }
 @media (max-width: 768px) {
@@ -132,7 +133,7 @@
 
     .navbar-logo {
         font-size: 20px;
-        margin-left: 1px;
+        margin-left: 5px;
     }
 
     .navbar-links {
@@ -715,15 +716,25 @@ h3:hover {
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-content">
-            <a href="#home"><div class="navbar-logo">Mohammed Abdullah</div></a>
+            <a href="#home">
+            <div style="display: flex; align-items: center; flex-direction: row; justify-content: space-between !important;background-color: #00f1fe1e;padding: 10px; border-radius: 10px;" href="#home">
+              
+                  <img src="./userMA.png" alt="User Image" style="width: 30px; height: 30px;">
+                
+              
+                  <div class="navbar-logo " style="font-size: 17px;">Abdullah</div>
+               
+              </div>
+            </a>
+              
             <div class="navbar-toggle" onclick="toggleMenu()">☰</div> <!-- Hamburger Icon -->
             <div class="navbar-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#education"  class="nav-link">Education</a>
-                <a href="#skills"  class="nav-link">Skills</a>
-                <a href="#certifications"  class="nav-link">Certifications</a>
-                <a href="#projects"  class="nav-link">Projects</a>
-                <a href="#achievements"  class="nav-link">Achievements</a>
+                <a href="#home" class="nav-link" onclick="toggleMenu()">Home</a>
+                <a href="#education"  class="nav-link" onclick="toggleMenu()">Education</a>
+                <a href="#skills"  class="nav-link" onclick="toggleMenu()">Skills</a>
+                <a href="#certifications"  class="nav-link" onclick="toggleMenu()">Certifications</a>
+                <a href="#projects"  class="nav-link" onclick="toggleMenu()">Projects</a>
+                <a href="#achievements"  class="nav-link" onclick="toggleMenu()">Achievements</a>
             </div>
         </div>
     </nav>
@@ -1386,6 +1397,21 @@ document.addEventListener('DOMContentLoaded', () => {
         new StaticParticleBackground(particleContainer);
     }
 });
+// Check if the browser supports service workers
+if ("serviceWorker" in navigator) {
+  // Register the service worker
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then((registration) => {
+        console.log("Service Worker registered with scope:", registration.scope);
+      })
+      .catch((error) => {
+        console.log("Service Worker registration failed:", error);
+      });
+  });
+}
+
 
 
     </script>
