@@ -40,6 +40,8 @@
 
 
 
+
+
         :root {
             --primary-gradient: linear-gradient(45deg,  #b36aeb, #33afad);
             --secondary-gradient: linear-gradient(135deg, #667eea, #764ba2);
@@ -712,16 +714,19 @@ h3:hover {
     </style>
 </head>
 <body>
+
+
     <!-- <div class="wave-background"></div> -->
     <!-- Navbar -->
     <nav class="navbar">
+        
+       
         <div class="navbar-content">
             <a href="#home">
             <div style="display: flex; align-items: center; flex-direction: row; justify-content: space-between !important;background-color: #00f1fe1e;padding: 10px; border-radius: 10px;" href="#home">
               
                   <img src="./userMA.png" alt="User Image" style="width: 30px; height: 30px;">
-                
-              
+            
                   <div class="navbar-logo " style="font-size: 17px;">Abdullah</div>
                
               </div>
@@ -739,9 +744,42 @@ h3:hover {
         </div>
     </nav>
     
+       
 
+    
     <!-- Hero Section -->
     <div class="home" id="home">
+        <h1 id="offline-message" style="
+        display: none; 
+        font-family: 'Quicksand', sans-serif; 
+        text-align: center;
+        font-weight: 1000;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        max-width: 90%;
+        width: 600px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        animation: pulse 2s infinite;;
+    ">
+        ⚠️ No Internet Connection<br>
+        <span style="font-size: 0.9em; font-weight: 900;">You are viewing a cached version</span>
+    </h1>
+    
+    <style>
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+    
         <div class="folio">
             <!-- Left Column: Personal Info -->
             <div class="personal-info">
@@ -1216,6 +1254,7 @@ h3:hover {
     <script>
         // Create the "Scroll to Top" button
         document.addEventListener("DOMContentLoaded", function() {
+              
     const scrollButton = document.createElement("button");
     scrollButton.id = "scrollToTopBtn";
     scrollButton.innerHTML = "&#8679;"; // Unicode arrow symbol
@@ -1390,27 +1429,85 @@ class StaticParticleBackground {
     }
 }
 
+let visit=0;
 // Initialize the particle background when the page loads
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Script Loaded");
+
     const particleContainer = document.querySelector('.home');
     if (particleContainer) {
         new StaticParticleBackground(particleContainer);
     }
-});
+    // Ensure the offline-message element exists
+    const offlineMessage = document.getElementById("offline-message");
+    if (!offlineMessage) {
+        console.error("Offline message element not found");
+    }
+
+    // Function to check if the user is offline and show the message
+    function handleOffline() {
+        if (offlineMessage) {
+            visit++;
+            offlineMessage.style.display = "block";  // Show the offline message
+            offlineMessage.style.backgroundColor=`#ff0000bc`
+            offlineMessage.innerHTML=`⚠️ No Internet Connection<br>
+        <span style="font-size: 0.9em; font-weight: 900;">You are viewing a cached version</span>`
+            console.log("Offline: Network status changed to offline.");
+        }
+    }
+
+    // Function to hide the offline message when the user is online
+    function handleOnline() {
+        if(visit>0){
+        if (offlineMessage) {
+            offlineMessage.style.display = "block";  // Hide the offline message
+            offlineMessage.style.backgroundColor=`#11ff00c6`
+            offlineMessage.innerHTML=` Back Online<br>`
+            //to disappear after 2 seconds
+            setTimeout(() => {
+                offlineMessage.style.display = "none";
+            }, 2000);
+       
+            console.log("Online: Network status changed to online.");
+        }
+    }
+    }
+
+    // Listen for online and offline events
+    window.addEventListener("offline", () => {
+        console.log("Event Triggered: Offline");
+        handleOffline();
+    });
+    window.addEventListener("online", () => {
+        console.log("Event Triggered: Online");
+        handleOnline();
+    });
+
+    // Initial check for network status
+    if (!navigator.onLine) {
+        console.log("Initial Status: Offline");
+        handleOffline();  // Show the offline message if already offline
+    } else {
+        console.log("Initial Status: Online");
+        handleOnline();   // Hide the message if the user is online
+    }
+
+
 // Check if the browser supports service workers
 if ("serviceWorker" in navigator) {
-  // Register the service worker
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/service-worker.js")
-      .then((registration) => {
-        console.log("Service Worker registered with scope:", registration.scope);
-      })
-      .catch((error) => {
-        console.log("Service Worker registration failed:", error);
-      });
-  });
+    // Register the service worker
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+                console.log("Service Worker registered with scope:", registration.scope);
+            })
+            .catch((error) => {
+                console.log("Service Worker registration failed:", error);
+            });
+    });
 }
+});
 
 
 
