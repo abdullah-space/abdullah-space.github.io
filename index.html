@@ -147,8 +147,10 @@
         position: absolute; /* Position the links below the logo */
         top: 50px; /* Position them below the navbar */
         left: 0;
-        background: rgba(12, 8, 28, 0.978);
+        /* background: rgba(12, 8, 28, 0.978); */
+        background-color: #255764f7;
         backdrop-filter: blur(10px);
+        border-radius: 10px;
         /* padding: 10px; */
         overflow: hidden; /* Hide overflowing content during animation */
         z-index: 1; /* Ensure the links appear below the logo */
@@ -162,6 +164,15 @@
     }
 
     /* Add a hamburger icon for mobile view */
+
+    .navbar-links.open {
+        max-height: 300px; /* Adjust to fit your menu content */
+        transform: scaleY(1);
+        transition: max-height 0.5s ease, transform 0.5s ease;
+        border-radius: 10px;
+        background-color: #255764f7;
+    }
+}
     .navbar-toggle {
         display: block;
         position: absolute; /* Position the hamburger icon absolutely */
@@ -173,15 +184,8 @@
         background: none;
         border: none;
         color: var(--text-color);
+        
     }
-
-    .navbar-links.open {
-        max-height: 300px; /* Adjust to fit your menu content */
-        transform: scaleY(1);
-        transition: max-height 0.5s ease, transform 0.5s ease;
-        border-radius: 10px;
-    }
-}
 
 
 /* Ensure the hamburger menu is hidden on larger screens */
@@ -763,7 +767,7 @@ h3:hover {
         width: 600px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        animation: pulse 2s infinite;;
+        animation: pulse 2s infinite;
     ">
         ⚠️ No Internet Connection<br>
         <span style="font-size: 0.9em; font-weight: 900;">You are viewing a cached version</span>
