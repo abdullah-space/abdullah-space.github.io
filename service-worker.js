@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v2"; // Incremented version
+const CACHE_NAME = "abdullah-pwa-cache-v3";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
@@ -22,34 +22,19 @@ self.addEventListener("install", (event) => {
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
-  self.skipWaiting(); // Activate the new service worker immediately
 });
 
-// Fetch Event with Cache Update
+// Fetch Event
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        // Fetch the latest version and update the cache
-        fetch(event.request).then((response) => {
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, response.clone());
-          });
-        });
-        return cachedResponse; // Return the cached response
-      }
-      // Fetch from the network if not in cache
-      return fetch(event.request).then((response) => {
-        return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      });
+    caches.match(event.request).then((response) => {
+      // Return cached version or fetch from network
+      return response || fetch(event.request);
     })
   );
 });
 
-// Activate Service Worker and Clean Old Caches
+// Activate Service Worker
 self.addEventListener("activate", (event) => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
@@ -64,5 +49,4 @@ self.addEventListener("activate", (event) => {
       )
     )
   );
-  self.clients.claim(); // Take control of all clients immediately
 });
