@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v11";
+const CACHE_NAME = "abdullah-pwa-cache-v20";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
@@ -50,7 +50,5 @@ self.addEventListener("activate", (event) => {
     )
   );
 });
-
-
 
 
