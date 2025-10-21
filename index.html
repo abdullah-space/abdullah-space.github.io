@@ -44,6 +44,33 @@
             }
         }
 
+        skill {
+            background-color: #39ff0d48;
+            border-radius: 7px;
+            padding: 2px 9px;
+            font-size: 1rem;
+
+
+        }
+
+        .skills {
+            /* background-color: red; */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            line-height: 2rem;
+        }
+
+        .link {
+            background-color: #00000099;
+            border-radius: 5px;
+            padding: 2px 9px;
+        }
+
+        .link:hover {
+            background-color: #0dfbff3a;
+        }
+
 
 
 
@@ -402,7 +429,7 @@
         }
 
         .project-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .footer {
@@ -578,11 +605,6 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
-        }
-
-        .project-card a:hover {
-            color: var(--accent-color, #ff6b35);
-            text-decoration: underline;
         }
 
 
@@ -1054,7 +1076,7 @@
                     </div>
                     <div class="project-card">
 
-                        <p>MySQL</p>
+                        <p>MYSQL</p>
                     </div>
                     <div class="project-card">
 
@@ -1136,6 +1158,10 @@
 
                         <p>Autocad</p>
                     </div>
+                    <div class="project-card">
+
+                        <p>Netlify</p>
+                    </div>
                 </div>
             </div>
 
@@ -1167,7 +1193,7 @@
 
                         <p>Apache Tomcat</p>
                     </div>
-                     <div class="project-card">
+                    <div class="project-card">
 
                         <p>Nginx</p>
                     </div>
@@ -1175,7 +1201,7 @@
 
                         <p>Redux</p>
                     </div>
-                     <div class="project-card">
+                    <div class="project-card">
 
                         <p>Tailwind</p>
                     </div>
@@ -1242,9 +1268,21 @@
                     <li>TCAS - Traffic collision avoidance system with Estimated time until crash</li>
                     <li>Added autopilot and also manual heading , altitude , speed selects</li>
                     <li>Navigate to nearest waypoint or holding pattern in case of emergencies</li>
-                    <li><strong>Technologies used:</strong> Html , Css , JavaScript , VanillaJS, HTMLCanvas</li>
-                    <li><a href="https://air-traffic-control.netlify.app/" target="_blank">Live on Website</a></li>
-                </ul>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+
+                    <skill>Html</skill>
+                    <skill>Css</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                    <skill>HTMLCanvas</skill>
+                </div>
+                <br><br>
+                <a href="https://air-traffic-control.netlify.app/" target="_blank" class="link">Live on Website <i
+                        class="fas fa-external-link-alt"></i></a>
+
+
             </div>
 
 
@@ -1260,71 +1298,198 @@
                     <li>Added Text-to-Speech Functionality</li>
                     <li>Dynamic Language translations for recipes</li>
                     <li>Suggest tutorial and similar recipes from Youtube</li>
-                    <li><strong>Technologies used:</strong> Machine Learning, CNN - Convolutional Neural Networks, Flask
-                        , Html , CSS, Javascript, Transformers.</li>
-                    <li><a href="https://github.com/abdullah798155/SnapCook" target="_blank">View on GitHub</a></li>
-                </ul>
+
+
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+
+                    <skill>Machine Learning</skill>
+                    <skill>Flask</skill>
+                    <skill>Html</skill>
+                    <skill>CSS</skill>
+                    <skill>CNN - Convolutional Neural Networks</skill>
+                    <skill>Javascript</skill>
+                    <skill>Transformers</skill>
+                </div>
+                <br><br>
+
+                <a href="https://github.com/abdullah798155/SnapCook" target="_blank" class="link">View on GitHub <i
+                        class="fas fa-external-link-alt"></i></a>
             </div>
 
             <!-- 5. Real Time Rice Seed Detection using Deep Learning and Augemented Reality -->
             <div class="project-card">
-                <h3>Real Time Rice Seed Detection using Deep Learning and Augemented Reality</h3><br>
+                <h3>Real Time Rice Seed Detection using Deep Learning and Augmented Reality</h3><br>
                 <img src="./project_ss/rice.png"
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
                 <p>A Rice seed detection model using AR</p><br>
                 <ul>
-                    <li>Prepared Handmade curated Dataset manually</li>
-                    <li>U-net for Segmentation</li>
+                    <li>Prepared handmade curated dataset manually</li>
+                    <li>U-net for segmentation</li>
                     <li>MobileNetV2 for classification</li>
                     <li>ARcore for Android App and OpenCV for Windows</li>
-                    <li>Displays Green segmented mask overylay on each rice seed in Real time</li>
-                    <li>Displays Rice seed variety , Confidence score.</li>
-                    <li>Added source of origin and Health benefits.</li>
-                    <li><strong>Technologies used:</strong> Machine/Deep Learning (Rice seed detection), Roboflow
-                        (Masking),Tensorflow, Open-CV U-net (Segmentation) , MobileNetV2 (Classification) , ARcore,
-                        Kotlin , Android Studio</li>
-                    <li><a href="https://github.com/abdullah798155/Rice-seed-detection-AR" target="_blank">View on
-                            GitHub</a></li>
-                </ul>
+                    <li>Displays green segmented mask overlay on each rice seed in real time</li>
+                    <li>Displays rice seed variety and confidence score</li>
+                    <li>Added source of origin and health benefits</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>Machine Learning</skill>
+                    <skill>Deep Learning</skill>
+                    <skill>Roboflow</skill>
+                    <skill>TensorFlow</skill>
+                    <skill>OpenCV</skill>
+                    <skill>U-net</skill>
+                    <skill>MobileNetV2</skill>
+                    <skill>ARcore</skill>
+                    <skill>Kotlin</skill>
+                    <skill>Android Studio</skill>
+                </div>
+                <br><br>
+                <a href="https://github.com/abdullah798155/Rice-seed-detection-AR" target="_blank" class="link">
+                    View on GitHub <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
 
 
 
             <div class="project-card">
-                <h3>Tic Tac Toe - Game engine</h3><br>
+                <h3>Created and published Node.js library (npm)</h3><br>
+                <img src="./project_ss/package.png"
+                    style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>A library to to get all player data and cards from a popular game Clash Royale</p><br>
+                <ul>
+                    <li> A lightweight Node.js library to fetch Clash Royale player
+                        data including cards and player stats.</li>
+                    <li>Uses the <strong>RoyaleAPI proxy</strong> to bypass Supercell IP restrictions securely.</li>
+                    <li>Provides two main functions: <code>fetchPlayerCards</code> and <code>fetchPlayerData</code> for
+                        retrieving player cards and profile info.</li>
+                    <li>Automatically <strong>normalizes card levels and counts</strong>
+                    </li>
+                    <li>Built with a <strong>modern ESM API</strong> compatible with Node.js 18+.</li>
+                    <li>Comes with full <strong>TypeScript type definitions</strong> via <code>index.d.ts</code>.</li>
+                    <li>Ideal for <strong>Next.js API routes</strong>, Express servers, and backend scripts.</li>
+                    <li>Includes trophies, clan, wins, and card collection details
+                        with image links.</li>
+                    <li>Open-source and published on npm</li>
+                    </li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+
+                    <skill>JavaScript</skill>
+                    <skill>TypeScript</skill>
+                    <skill>NodeJS</skill>
+                    <skill>npm</skill>
+                    <skill>ESM Modules</skill>
+                    <skill>API Integration</skill>
+                    <skill>Open Source</skill>
+                    <skill>node</skill>
+                    <skill>git and github</skill>
+                </div>
+                <br><br>
+
+                <a href="https://www.npmjs.com/package/royale-tracker" target="_blank" class="link">npm package source
+                    <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+
+            <div class="project-card">
+                <h3>Clash Royale - Card Tracker</h3><br>
+                <img src="./project_ss/royale.png"
+                    style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
+                <p>A website to track status and statistics of Clash Royale cards for faster progression</p><br>
+                <ul>
+                    <li>Displays all profile details of a user and performs winrate/win-ratio calculations</li>
+                    <li>Displays all cards by normalizing their level and card counts into a visually appealing grid
+                    </li>
+                    <li>Shows which cards are maxed and which are yet to be maxed, organized by categories and levels (%
+                        of cards per each level)</li>
+                    <li>If cards are maxed, it shows how many elite wild cards you get for each rarity</li>
+                    <li>Displays total cards needed to grey out a particular card for faster progression</li>
+                    <li>Displays total cards needed to max out the whole account</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>NextJS</skill>
+                    <skill>NextJS API creation</skill>
+                    <skill>Serverless API functions</skill>
+                    <skill>Dynamic routing</skill>
+                    <skill>Git / GitHub</skill>
+                    <skill>.env</skill>
+                    <skill>React Hooks</skill>
+                    <skill>Netlify</skill>
+                </div>
+                <br><br>
+                <a href="https://royale-tracker.netlify.app/" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+
+
+
+            <div class="project-card">
+                <h3>Tic Tac Toe - Game Engine</h3><br>
                 <img src="./project_ss/TicTacToe.png"
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
-                <p>Unbeatable TicTacToe Game engine</p><br>
+                <p>Unbeatable Tic Tac Toe game engine</p><br>
                 <ul>
-                    <li>Uses Minimax algorithm for Decision making to search for the best move</li>
-                    <li>Can increase or decrease Search depth</li>
-                    <li>Uses Alpha-Beta pruning to search faster by pruning vast amounts of useless branches</li>
-                    <li>Shows Live Evalution of what Engine thinks the current evaluation is</li> 
-                    <li>Shows best move for opponent if selected</li> 
-                    <li>Can switch between human and Ai mode</li> 
-                    <li><strong>Technologies/concepts used:</strong> Html , Css , JavaScript , Decision making , Minimax , Alpha-Beta Pruning , Game tree , Machine Learning , AI </li>
-                    <li><a href="https://tic-tac-toe-engine.netlify.app/" target="_blank">Live on Website</a></li>
-                </ul>
+                    <li>Uses Minimax algorithm for decision making to search for the best move</li>
+                    <li>Can increase or decrease search depth</li>
+                    <li>Uses Alpha-Beta pruning to search faster by pruning unnecessary branches</li>
+                    <li>Shows live evaluation of the current board state according to the engine</li>
+                    <li>Shows best move for opponent if selected</li>
+                    <li>Can switch between human and AI mode</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>Decision Making</skill>
+                    <skill>Minimax</skill>
+                    <skill>Alpha-Beta Pruning</skill>
+                    <skill>Game Tree</skill>
+                    <skill>Machine Learning</skill>
+                    <skill>AI</skill>
+                </div>
+                <br><br>
+                <a href="https://tic-tac-toe-engine.netlify.app/" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
 
 
 
+
             <div class="project-card">
-                <h3>Blog reader</h3><br>
+                <h3>Blog Reader</h3><br>
                 <img src="./project_ss/blogs.png"
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
                 <p>Read blogs in a modern way</p><br>
                 <ul>
-                    <li>Read blogs organised in a modern and minimal way</li>
-                    <li>Added support for various formats like bolding , italics , code-sections , quotes , responsive
-                        tables </li>
-                    <li>Added fluid animations for smooth navigation across</li>
-                    <li>Added copy and paste and more QOL features</li>
-                    <li>Added dark mode for ease of eyes</li>
-                    <li><strong>Technologies used:</strong> Html , Css , JavaScript , VanillaJS</li>
-                    <li><a href="https://mycoolblogs.netlify.app/" target="_blank">Live on Website</a></li>
-                </ul>
+                    <li>Read blogs organized in a modern and minimal way</li>
+                    <li>Added support for various formats like bolding, italics, code sections, quotes, responsive
+                        tables</li>
+                    <li>Added fluid animations for smooth navigation</li>
+                    <li>Added copy and paste and other quality-of-life features</li>
+                    <li>Added dark mode for ease on the eyes</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                </div>
+                <br><br>
+                <a href="https://mycoolblogs.netlify.app/" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
             <!-- 2. Chess Analyzer -->
             <div class="project-card">
@@ -1333,13 +1498,22 @@
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
                 <p>Magic of FEN strings</p><br>
                 <ul>
-                    <li>Parses FEN string </li>
-                    <li>Evaluates scores for black and white</li>
-                    <li>Checks & Checkmate detection and other statistics</li>
+                    <li>Parses FEN strings</li>
+                    <li>Evaluates scores for black and white pieces</li>
+                    <li>Checks & checkmate detection and other statistics</li>
                     <li>Ascii score graph (-1 to 1)</li>
-                    <li><strong>Technologies used:</strong> Html , Css , JavaScript , VanillaJS</li>
-                    <li><a href="https://chess50.github.io" target="_blank">Live on Website</a></li>
-                </ul>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                </div>
+                <br><br>
+                <a href="https://chess50.github.io" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
 
             <!-- 3. Discord Game Chatbot -->
@@ -1352,15 +1526,27 @@
                     <li>Retrieve live data from an online MMORPG</li>
                     <li>Process data to compute various game mechanics</li>
                     <li>Display derived statistics for faster progression</li>
-                    <li>Moderate Discord Servers & Graph statistics (SLASH-COMMANDS)</li>
-                    <li><strong>Technologies used:</strong> Python , JavaScript ,DiscordPy, NodeJS , DiscordJS , MYSQL
-                    </li>
-                    <li>
-                        <a href="https://github.com/abdullah798155/hordes-calc" target="_blank">Game Bot</a> |
-                        <a href="https://github.com/abdullah798155/Slash-Nodejs" target="_blank">Moderator Bot</a>
-                    </li>
-                </ul>
+                    <li>Moderate Discord servers & display graph statistics using slash-commands</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>Python</skill>
+                    <skill>JavaScript</skill>
+                    <skill>DiscordPy</skill>
+                    <skill>NodeJS</skill>
+                    <skill>DiscordJS</skill>
+                    <skill>MySQL</skill>
+                </div>
+                <br><br>
+                <a href="https://github.com/abdullah798155/hordes-calc" target="_blank" class="link">
+                    Game Bot <i class="fas fa-external-link-alt"></i>
+                </a>
+                <br><br>
+                <a href="https://github.com/abdullah798155/Slash-Nodejs" target="_blank" class="link">
+                    Moderator Bot <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
             <!-- 4. SnapCook -->
 
@@ -1370,19 +1556,34 @@
                 <h3>Unified Civic Management System</h3><br>
                 <img src="./project_ss/civic.png"
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
-                <p>A System to make rural lives easier</p><br>
+                <p>A system to make rural lives easier</p><br>
                 <ul>
-                    <li>Login and register</li>
-                    <li>Users logon to raise complaints with phone numbers</li>
-                    <li>Ration shops , Hospital doctors, School Teachers and Municipality timings & availability.</li>
-                    <li>Admin access to handle complaints and take an action</li>
-                    <li>In case of Medical emergency , inform ambulance immediately</li>
-                    <li><strong>Technologies used:</strong> ReactJS, Axios, , Nodemon, ExpressJS, Html , css ,
-                        Javascript, MYSQL , MERN STACK , NodeJS, Cloud/Remote Mysql DB</li>
-                    <li><a href="https://github.com/abdullah798155/unified_civic" target="_blank">View on GitHub</a>
-                    </li>
-                </ul>
+                    <li>Login and register functionality</li>
+                    <li>Users can raise complaints with phone numbers</li>
+                    <li>Ration shops, hospital doctors, school teachers, and municipality timings & availability</li>
+                    <li>Admin access to handle complaints and take action</li>
+                    <li>In case of medical emergencies, inform ambulance immediately</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>ReactJS</skill>
+                    <skill>Axios</skill>
+                    <skill>Nodemon</skill>
+                    <skill>ExpressJS</skill>
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>MySQL</skill>
+                    <skill>MERN Stack</skill>
+                    <skill>NodeJS</skill>
+                    <skill>Cloud/Remote MySQL DB</skill>
+                </div>
+                <br><br>
+                <a href="https://github.com/abdullah798155/unified_civic" target="_blank" class="link">
+                    View on GitHub <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
             <!-- 7. Invoice Generator -->
             <div class="project-card">
@@ -1391,17 +1592,31 @@
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
                 <p>Generate and download invoices</p><br>
                 <ul>
-                    <li>Dynamic Date and Time Handling</li>
-                    <li>Interactive Invoice Items</li>
-                    <li>Live Preview</li>
-                    <li>Form Reset Functionality</li>
+                    <li>Dynamic date and time handling</li>
+                    <li>Interactive invoice items</li>
+                    <li>Live preview</li>
+                    <li>Form reset functionality</li>
                     <li>PDF download</li>
                     <li>Sign your invoice</li>
-                    <li><strong>Technologies used:</strong> Html , CSS , JavaScript, VanillaJS, jsPdf, HTML2canvas,
-                        Netlify</li>
-                    <li><a href="https://invoice-genx.netlify.app" target="_blank">Live on Website</a></li>
-                </ul>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                    <skill>jsPDF</skill>
+                    <skill>HTML2Canvas</skill>
+                    <skill>Netlify</skill>
+                </div>
+                <br><br>
+                <a href="https://invoice-genx.netlify.app" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
+
+
             <div class="project-card">
                 <h3>Timinx</h3><br>
                 <img src="./project_ss/timinx.png"
@@ -1409,15 +1624,26 @@
                 <p>Enjoy watching time by seeing tiny analog clocks in sync</p><br>
                 <ul>
                     <li>A digital clock made with many small analog clocks</li>
-                    <li>Each small analog clock move independently to display current time</li>
-                    <li>Fully responsive on all kinds of screen</li>
-                    <li>Can also be used as live screen wallpaper</li>
-                    <li>Can be used as Screensaver</li>
+                    <li>Each small analog clock moves independently to display the current time</li>
+                    <li>Fully responsive on all screen sizes</li>
+                    <li>Can also be used as a live screen wallpaper</li>
+                    <li>Can be used as a screensaver</li>
                     <li>Full dark neon green minimal theme</li>
-                    <li><strong>Technologies used:</strong> Html , CSS , JavaScript, VanillaJS, DOM Manipulation</li>
-                    <li><a href="https://timinx.netlify.app/" target="_blank">Live on Website</a></li>
-                </ul>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                    <skill>DOM Manipulation</skill>
+                </div>
+                <br><br>
+                <a href="https://timinx.netlify.app/" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
             <!-- 8. Dues Tracker -->
             <div class="project-card">
@@ -1426,20 +1652,32 @@
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
                 <p>Manage and track personal or business dues and paybacks</p><br>
                 <ul>
-                    <li>Add and save contacts for quick entry selection.</li>
+                    <li>Add and save contacts for quick entry selection</li>
                     <li>Record incoming dues and outgoing paybacks with details like name, reason, amount, and optional
-                        mobile number.</li>
-                    <li>View current bank balance, total dues, total paybacks, and net balance.</li>
-                    <li>Send daily reminders via Whatsapp</li>
-                    <li>Export entries as PDF for record-keeping or sharing.</li>
-                    <li>Modify existing entries to correct or update information.</li>
-                    <li>Intuitive design for ease of use.</li>
-                    <li>Light and Dark mode.</li>
-                    <li><strong>Technologies used:</strong> HTML5, CSS3, JavaScript (Vanilla JS) ,jsPDF ,html2canvas,
-                        Netlify</li>
-                    <li><a href="https://dues.netlify.app" target="_blank">Live on Website</a></li>
-                </ul>
+                        mobile number</li>
+                    <li>View current bank balance, total dues, total paybacks, and net balance</li>
+                    <li>Send daily reminders via WhatsApp</li>
+                    <li>Export entries as PDF for record-keeping or sharing</li>
+                    <li>Modify existing entries to correct or update information</li>
+                    <li>Intuitive design for ease of use</li>
+                    <li>Light and dark mode</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML5</skill>
+                    <skill>CSS3</skill>
+                    <skill>JavaScript (Vanilla JS)</skill>
+                    <skill>jsPDF</skill>
+                    <skill>HTML2Canvas</skill>
+                    <skill>Netlify</skill>
+                </div>
+                <br><br>
+                <a href="https://dues.netlify.app" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
+
             <div class="project-card">
                 <h3>Attendance Tracker</h3><br>
                 <img src="./project_ss/attendance.png"
@@ -1447,54 +1685,94 @@
                 <p>Tracking got easier</p><br>
                 <ul>
                     <li>Tracks attendance to reach a certain target</li>
-                    <li>Display graphs (future projections)</li>
-                    <li>Helps you take leaves if u surpass target</li>
-                    <li><strong>Technologies used:</strong> Html , Css , JavaScript , VanillaJS, ChartJS</li>
-                    <li><a href="https://attendance0.github.io" target="_blank">Live on Website</a></li>
-                </ul>
+                    <li>Displays graphs with future projections</li>
+                    <li>Helps you take leaves if you surpass the target</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML</skill>
+                    <skill>CSS</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                    <skill>ChartJS</skill>
+                </div>
+                <br><br>
+                <a href="https://attendance0.github.io" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
             <!-- 9. QuranFlex/QuranEasy -->
             <div class="project-card">
                 <h3>QuranFlex/QuranEasy</h3><br>
                 <img src="./project_ss/quranflex.png"
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
-                <p>Read Quran with Tafsir along with multiple translations Side by side</p><br>
+                <p>Read Quran with Tafsir along with multiple translations side by side</p><br>
                 <ul>
-                    <li>Chapter and Verse navigation (QOL searching)</li>
-                    <li>Multiple Translations side by side for multilinguals</li>
-                    <li>Detailed Tafsirs (context and cross references) for every verse</li>
-                    <li>Responsive and many QOL features</li>
-                    <li>Added Light and Dark mode</li>
-                    <li>Download Windows Desktop app (offline) and Website (Online)</li>
-                    <li><strong>Technologies used:</strong> HTML5, CSS3, JavaScript , VanillaJS, ElectronJS, Local
-                        DB.js, PWA - Progressive Web app, Netlify</li>
-                    <li>
-                        <a href="https://quraneasy.netlify.app" target="_blank">QuranEasy</a> |
-                        <a href="https://quranflex.netlify.app" target="_blank">QuranFlex</a>
-                    </li>
-                </ul>
+                    <li>Chapter and verse navigation for quick and easy searching</li>
+                    <li>Multiple translations displayed side by side for multilingual users</li>
+                    <li>Detailed Tafsirs including context and cross-references for every verse</li>
+                    <li>Responsive design with many quality-of-life features</li>
+                    <li>Added light and dark mode</li>
+                    <li>Downloadable Windows desktop app (offline) and website (online)</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML5</skill>
+                    <skill>CSS3</skill>
+                    <skill>JavaScript</skill>
+                    <skill>VanillaJS</skill>
+                    <skill>ElectronJS</skill>
+                    <skill>Local DB.js</skill>
+                    <skill>PWA - Progressive Web App</skill>
+                    <skill>Netlify</skill>
+                </div>
+                <br><br>
+                <a href="https://quraneasy.netlify.app" target="_blank" class="link">
+                    QuranEasy <i class="fas fa-external-link-alt"></i>
+                </a>
+                <br><br>
+                <a href="https://quranflex.netlify.app" target="_blank" class="link">
+                    QuranFlex <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
             <!-- 10. ReflectHub -->
             <div class="project-card">
                 <h3>ReflectHub</h3><br>
                 <img src="./project_ss/ReflectHub.png"
                     style="border-radius: 10px; margin-bottom: 15px;width:100%;height:200px">
-                <p>A place where rational people reflect deeply upon the creation of the Universe/Heavens and the earth
+                <p>A place where rational people reflect deeply upon the creation of the Universe/Heavens, the Earth,
                     and other real-life aspects.</p><br>
                 <ul>
                     <li>A handcrafted compilation of videos and content for deep reflection</li>
-                    <li>Categories - Rational, Scientific, Inspirational , Reactions, Reflections, Verses from Quran,
-                        Declaration of faith</li>
-                    <li>Advanced Search functionality for ease of finding right video</li>
-                    <li>A deep section to reflection on many topics @https://reflecthub.github.io/reflections</li>
-                    <li>Implemented functionality for Search Engine crawlers to index website.</li>
-                    <li><strong>Technologies used:</strong> HTML5, CSS3, JavaScript ,PWA - Progressive Web app, Youtube
-                        API, GitHub pages, ElectronJS, Google translate, Service-Worker</li>
-                    <li><a href="https://reflecthub.github.io" target="_blank">Live on Website</a></li>
-                </ul>
+                    <li>Categories include: Rational, Scientific, Inspirational, Reactions, Reflections, Verses from
+                        Quran, Declaration of faith</li>
+                    <li>Advanced search functionality for ease of finding the right video</li>
+                    <li>A dedicated section for reflections on many topics: <a
+                            href="https://reflecthub.github.io/reflections" target="_blank">Reflections</a></li>
+                    <li>Implemented functionality for search engine crawlers to index the website</li>
+                </ul><br>
+                <h2>Technologies used:</h2>
+                <div class="skills">
+                    <skill>HTML5</skill>
+                    <skill>CSS3</skill>
+                    <skill>JavaScript</skill>
+                    <skill>PWA - Progressive Web App</skill>
+                    <skill>Youtube API</skill>
+                    <skill>GitHub Pages</skill>
+                    <skill>ElectronJS</skill>
+                    <skill>Google Translate</skill>
+                    <skill>Service Worker</skill>
+                </div>
+                <br><br>
+                <a href="https://reflecthub.github.io" target="_blank" class="link">
+                    Live on Website <i class="fas fa-external-link-alt"></i>
+                </a>
             </div>
+
 
         </div>
     </section>
